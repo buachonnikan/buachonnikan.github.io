@@ -169,6 +169,14 @@ var m=0;
             document.getElementById("etax_c").style.display = "none";//explain tax rev
             document.getElementById("rc_but").style.display = "none";
             document.getElementById("tc_but").style.display = "none";
+
+            //usa
+            document.getElementById("drop_u").style.display = "none";
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
+            document.getElementById("ru_but").style.display = "none";
+            document.getElementById("tu_but").style.display = "none";
         }
         function brr() {
             document.getElementById("all_rev").style.display = "none";
@@ -194,6 +202,16 @@ var m=0;
 
             document.getElementById("rc_but").style.display = "none";
             document.getElementById("tc_but").style.display = "none";
+            document.getElementById("ru_but").style.display = "none";
+            document.getElementById("tu_but").style.display = "none";
+
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_u").style.display = "none";//drop
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_c").style.display = "none";//drop
+            
         }
         function canr() {
             document.getElementById("all_rev").style.display = "none";
@@ -219,6 +237,15 @@ var m=0;
 
             document.getElementById("rb_but").style.display = "none";
             document.getElementById("tb_but").style.display = "none";
+            document.getElementById("ru_but").style.display = "none";
+            document.getElementById("tu_but").style.display = "none";
+
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_u").style.display = "none";//drop
+            document.getElementById("BRA_bar").style.display = "none";//bar        
+            document.getElementById("BRA_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_b").style.display = "none";//drop
         }
         function usr() {
             document.getElementById("all_rev").style.display = "none";
@@ -234,6 +261,25 @@ var m=0;
             document.getElementById("ea").style.display = "none";
             document.getElementById("ej").style.display = "none";
             document.getElementById("eb").style.display = "none";
+
+            document.getElementById("drop_u").style.display = "none";
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
+            document.getElementById("ru_but").style.display = "none";
+            document.getElementById("tu_but").style.display = "initial";
+
+            document.getElementById("rb_but").style.display = "none";
+            document.getElementById("tb_but").style.display = "none";
+            document.getElementById("rc_but").style.display = "none";
+            document.getElementById("tc_but").style.display = "none";
+
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_c").style.display = "none";//drop
+            document.getElementById("BRA_bar").style.display = "none";//bar        
+            document.getElementById("BRA_tax_rev").style.display = "none";//donut
+            document.getElementById("drop_b").style.display = "none";//drop
         }
         function arr() {
             document.getElementById("all_rev").style.display = "none";
@@ -344,3 +390,41 @@ var m=0;
             document.getElementById("CAN_tax_rev").style.display = "initial";//donut
         }
 
+        function ru_but(){
+            document.getElementById("USA_rev").style.display = "initial";
+            document.getElementById("eu").style.display = "initial"; //explain
+
+            //button
+            document.getElementById("ru_but").style.display = "none";
+            document.getElementById("tu_but").style.display = "initial";
+
+            //tax rev
+            document.getElementById("drop_u").style.display = "none";
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
+            
+        }
+        function tu_but(){
+            document.getElementById("USA_rev").style.display = "none";
+            document.getElementById("eu").style.display = "none"; //explain
+
+            //button
+            document.getElementById("ru_but").style.display = "initial";
+            document.getElementById("tu_but").style.display = "none";
+
+            //tax rev
+            document.getElementById("drop_u").style.display = "initial";
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "initial";//donut
+            document.getElementById("etax_u").style.display = "initial";//explain tax rev
+            
+        }
+        function u_bar(){ //click donut to bar canada
+            document.getElementById("USA_bar").style.display = "initial";//bar        
+            document.getElementById("USA_tax_rev").style.display = "none";//donut
+        }
+        function u_don(){//click bar to donut canada
+            document.getElementById("USA_bar").style.display = "none";//bar        
+            document.getElementById("USA_tax_rev").style.display = "initial";//donut
+        }
