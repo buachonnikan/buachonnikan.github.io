@@ -1,1 +1,378 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+
+        <!-------------------------------------------------- graph -------------------------------------------------------->
+    
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+        <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+        <script src="https://code.highcharts.com/modules/funnel3d.js"></script>
+        <script src="https://code.highcharts.com/modules/pyramid3d.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/item-series.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <link rel="stylesheet" type="text/css" href="./gdp_css/brazil.css">
+        <link rel="stylesheet" type="text/css" href="./gdp_css/canada.css">
+        <link rel="stylesheet" type="text/css" href="./gdp_css/us.css">
+        <link rel="stylesheet" type="text/css" href="./gdp_css/jm.css">
+        <link rel="stylesheet" type="text/css" href="./gdp_css/ag.css">
+
+        <link rel="stylesheet" type="text/css" href="./rev_css/all_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/arg_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/arg_tax_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/bra_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/bra_tax_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/can_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/can_tax_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/jam_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/jam_tax_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/usa_rev.css">
+        <link rel="stylesheet" type="text/css" href="./rev_css/usa_tax_rev.css">
+
+        <!---------------------------------------------------------------------------------------------------------------->
+
+
+    </head>
+    
+    <body onload="check()">
+        <div style="width:100%;">
+            <div class="in" id="b1" onclick="menu()"><a href="#MAP" class="click"><div class="c">MAP</div></a></div>
+            <div class="in" id="b2" onclick="menu()"><a href="#IMPORT" class="click"><div class="c">IMPORT OF GOODS AND SERVICES</div></a></div>
+            <div class="in" id="b3" onclick="menu()"><a href="#EXPORT" class="click"><div class="c">EXPORT OF GOODS AND SERVICES</div></a></div>
+            <div class="in" id="b4" onclick="menu()"><a href="#TAX" class="click"><div class="c">TAX RATE : ANALYSIS</div></a></div>
+        </div>
+        <button onclick="Omenu()" id="menu">MENU</button>
+        
+        <div id="TAX" style="height:100%;">
+            <div style="width:49%;height:100%;display: inline-block;float: left;position:relative">
+                <div id="tax" style="width:80%; height: 400px; margin: 15 auto;position: absolute;transform: translate(-50%,-50%);top:50%;left:50%;"></div>
+            </div>
+            <div style="width:49%;height:100%;float: right;display:inline-block;position: relative;">
+                <br><br><br><br>
+                <div style="font-size: 40px;">อธิบาย</div>
+            </div> 
+            <!-- <div id="tax"style="height: 400px; margin: auto; min-width: 310px; max-width: 600px"></div> -->
+        </div>
+        <div id="MAP" style="height:100%;">
+            <div class="slide-wrap" id="GDP">
+                <div class="wrap">
+                    <div class="slider">
+                        <div class="slide" id="slide-1">
+                            <div class="slidebox"  style="width:100%;height: 99%;">
+                                <div style="width:49%;height:100%;display: inline-block;float: left;">
+                                    <!-- <input src="./img/AR.png" class="AR" onclick="ar()"> -->
+                                    <div class="ar">
+                                        <img src="./img/AR.png" class="AR" onclick="ar()">
+                                        <div class="overlay" id="ar">
+                                            <div class="text">Argentina</div>
+                                        </div>
+                                    </div>
+                                    <div class="br">
+                                        <img src="./img/BR.png" class="BR" onclick="br()">
+                                        <div class="overlay" id="br">
+                                            <div class="text">Brazil</div>
+                                        </div>
+                                    </div>
+                                    <div class="us">
+                                        <img src="./img/US.png" class="US" onclick="us()">
+                                        <div class="overlay" id="us">
+                                            <div class="text">United States</div>
+                                        </div>
+                                    </div>
+                                    <div class="can">
+                                        <img src="./img/CAN.png" class="CAN" onclick="can()">
+                                        <div class="overlay" id="can">
+                                            <div class="text">Canada</div>
+                                        </div>
+                                    </div>
+                                    <div class="JM" onclick="jm()"><div class="jm">Jamaica</div></div>
+                                    <img src="./img/none.png" class="none">
+                                </div>
+                                <div style="width:49%;height:100%;float: right;display:inline-block;position: relative;">
+                                    <div>
+                                        <div id="gdp" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="eg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            From the graph you will see that The country with the highest total tax revenue is 
+                                            <span style="font-style: italic;font-weight: 600;font-size: 18px;">USA</span>,
+                                             which is much higher than other countries.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Argentina</span> and <span style="font-style: italic;font-weight: 600;">Brazil</span>
+                                            , which have similar tax rates to the USA and <span style="font-style: italic;font-weight: 600;">Canada</span> and 
+                                            <span style="font-style: italic;font-weight: 600;">Jamaica</span>.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="brazil" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="ebg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="canada" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="ecg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="US" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="eug"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="JM" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="ejg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="AG" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="eag"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                </div>    
+                            <!-- <div id="brazil"></div> -->
+                            </div>
+                        </div>
+
+                        <!-- revenue----------------------------------------------------------------------->
+                        <div class="slide" id="GovernmentRevenue">
+                            <div class="slidebox"  style="width:100%;height: 99%;">
+                                <div style="width:49%;height:100%;display: inline-block;float: left;">
+                                    <div class="ar">
+                                        <img src="./img/AR.png" class="AR" onclick="arr()">
+                                        <div class="overlay" id="ar">
+                                            <div class="text">Argentina</div>
+                                        </div>
+                                    </div>
+                                    <div class="br">
+                                        <img src="./img/BR.png" class="BR" onclick="brr()">
+                                        <div class="overlay" id="br">
+                                            <div class="text">Brazil</div>
+                                        </div>
+                                    </div>
+                                    <div class="us">
+                                        <img src="./img/US.png" class="US" onclick="usr()">
+                                        <div class="overlay" id="us">
+                                            <div class="text">United States</div>
+                                        </div>
+                                    </div>
+                                    <div class="can">
+                                        <img src="./img/CAN.png" class="CAN" onclick="canr()">
+                                        <div class="overlay" id="can">
+                                            <div class="text">Canada</div>
+                                        </div>
+                                    </div>
+                                    <div class="JM" onclick="jmr()"><div class="jm">Jamaica</div></div>
+                                    <img src="./img/none.png" class="none">
+                                </div>
+                                <div style="width:49%;height:100%;float:right;display:inline-block;position: relative;font-size:15px;">
+                                    <div>
+                                        <div id="all_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="er"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            From the graph you will see that The country with the highest total tax revenue is 
+                                            <span style="font-style: italic;font-weight: 600;font-size: 18px;">USA</span>,
+                                             which is much higher than other countries.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Argentina</span> and <span style="font-style: italic;font-weight: 600;">Brazil</span>
+                                            , which have similar tax rates to the USA and <span style="font-style: italic;font-weight: 600;">Canada</span> and 
+                                            <span style="font-style: italic;font-weight: 600;">Jamaica</span>.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="BRA_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="eb"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                        <div onclick="tb_but()" id="tb_but" class="r-but">Focus Tax Revenue</div>
+                                        <div onclick="rb_but()" id="rb_but" class="r-but">Focus Total Revenue</div>
+                                        <div id="drop_b" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
+                                            <button class="dropbtn">type graph</button>
+                                            <div class="dropdown-content">
+                                                <div onclick="b_bar()" class="d">BAR</div>
+                                                <div onclick="b_don()" class="d">DONUT</div>
+                                            </div>
+                                        </div>
+                                        <div id="BRA_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="BRA_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="etax_b"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="CAN_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
+                                        <div id="ec"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="USA_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
+                                        <div id="eu"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="JAM_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
+                                        <div id="ej"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="ARG_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
+                                        <div id="ea"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
+                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            of the country's total tax revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        </div>
+                                    </div>
+
+                                </div>    
+                            </div>
+                        </div>
+                        
+                        <div class="jumps">
+                            <div class="jump" id="j1"><a href="#slide-1" class="jumpp" onclick="gt()">GDP</a></div>
+                            <div class="jump" id="j2"><a href="#GovernmentRevenue" class="jumpp" style="width:100%" onclick="rt()">Government Revenue</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="IMPORT" style="height:100%;">
+            <div style="width:49%;height:100%;display: inline-block;float: left;position:relative">
+                <div id="import" style="width:80%; height: 400px; margin: 15 auto;position: absolute;transform: translate(-50%,-50%);top:50%;left:50%;"></div>
+            </div>
+            <div style="width:49%;height:100%;float: right;display:inline-block;position: relative;">
+                <br><br><br><br>
+                <div style="font-size: 15px;width:80%;position:absolute;transform: translate(-50%,-50%);top:50%;left:50%;">
+                    This bar chart shows the ratio between the value of imported goods and 
+                    services from Gross domestic product value in 2014 to 2016.
+                    <br><br>
+                    From the graph you will see that The highest percentage of countries in 2014 to 2016 
+                    is <span style="font-size:30px;">Jamaica</span>.
+                    <br><br>
+                    In <span style="font-size:30px;color:#A0CFD3">2014</span> is <span style="font-size:30px;color:#A0CFD3">53.5%</span><br>
+                    In <span style="font-size:25px;color:#8D94BA">2015</span> is <span style="font-size:25px;color:#8D94BA">46.2%</span><br>
+                    And in <span style="font-size:20px;color:#9A7AA0">2016</span> is <span style="font-size:20px;color:#9A7AA0">44.6%</span>
+                </div>
+            </div> 
+        </div>
+        <div id="EXPORT" style="height:100%;">
+            <div style="width:49%;height:100%;display: inline-block;float: left;position:relative">
+                <div id="export" style="width:80%; height: 400px; margin: 15 auto;position: absolute;transform: translate(-50%,-50%);top:50%;left:50%;"></div>
+            </div>
+            <div style="width:49%;height:100%;float: right;display:inline-block;position: relative;">
+                <br><br><br><br>
+                <div style="font-size: 15px;width:80%;position:absolute;transform: translate(-50%,-50%);top:50%;left:50%;">
+                    This bar chart shows the ratio between the value of exported goods and 
+                    services from Gross domestic product value in 2014 to 2016.
+                    <br><br>
+                    From the graph you will see that There are 2 countries that have more percentages than other countries and have very similar values : 
+                    <br><span style="font-size:30px;">Canada</span> and <span style="font-size:30px;">Jamaica</span>.
+                    <br><br>
+                    In <span style="font-size:30px;color:#843b62">2014</span> is <span style="font-size:30px;color:#843b62">31.5%</span> from 
+                    <span style="font-size:30px;color:#843b62">Canada</span><br>
+                    In <span style="font-size:28px;color:#f67e7d">2015</span> is <span style="font-size:28px;color:#f67e7d">31.5%</span> from 
+                    <span style="font-size:28px;color:#f67e7d">Canada</span><br>
+                    And in <span style="font-size:25px;color:#ffb997">2016</span> is <span style="font-size:25px;color:#ffb997">31.3%</span> from 
+                    <span style="font-size:25px;color:#ffb997">Jamaica</span>
+                </div>
+            </div> 
+        </div>
+    </body>
+        
+
+    <!------------------------------------------------- graph ------------------------------------------------------>
+
+    <script src="./gdp_js/export-gdp.js"></script>
+    <script src="./gdp_js/import-gdp.js"></script>
+    <script src="./gdp_js/valueadd-brazil.js"></script>
+    <script src="./gdp_js/valueadd-canada.js"></script>
+    <script src="./gdp_js/valueadd-United States.js"></script>
+    <script src="./gdp_js/valueadd-JM.js"></script>
+    <script src="./gdp_js/valueadd-AG.js"></script>
+    <script src="./gdp_js/tax.js"></script>
+    <script src="./gdp_js/gdp.js"></script>
+    
+    <script src="./rev_js/all_revenue.js"></script>
+    <script src="./rev_js/ARG_revenue.js"></script>
+    <script src="./rev_js/ARG_tax_revenue.js"></script>
+    <script src="./rev_js/ARG_tax_revenue_bar.js"></script>
+    <script src="./rev_js/BRA_revenue.js"></script>
+    <script src="./rev_js/BRA_tax_revenue.js"></script>
+    <script src="./rev_js/BRA_tax_revenue_bar.js"></script>
+    <script src="./rev_js/CAN_revenue.js"></script>
+    <script src="./rev_js/CAN_tax_revenue.js"></script>
+    <script src="./rev_js/CAN_tax_revenue_bar.js"></script>
+    <script src="./rev_js/JAM_revenue.js"></script>
+    <script src="./rev_js/JAM_tax_revenue.js"></script>
+    <script src="./rev_js/JAM_tax_revenue_bar.js"></script>
+    <script src="./rev_js/USA_revenue.js"></script>
+    <script src="./rev_js/USA_tax_revenue.js"></script>
+    <script src="./rev_js/USA_tax_revenue_bar.js"></script>
+
+    <!--------------------------------------------------------------------------------------------------------------->
+
+    <script src="./main.js"></script>    
+
+</html>
