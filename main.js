@@ -161,6 +161,14 @@ var m=0;
             document.getElementById("etax_b").style.display = "none";//explain tax rev
             document.getElementById("rb_but").style.display = "none";
             document.getElementById("tb_but").style.display = "none";
+
+            //canada
+            document.getElementById("drop_c").style.display = "none";
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("rc_but").style.display = "none";
+            document.getElementById("tc_but").style.display = "none";
         }
         function brr() {
             document.getElementById("all_rev").style.display = "none";
@@ -198,6 +206,13 @@ var m=0;
             document.getElementById("ea").style.display = "none";
             document.getElementById("ej").style.display = "none";
             document.getElementById("eb").style.display = "none";
+
+            document.getElementById("drop_c").style.display = "none";
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("rc_but").style.display = "none";
+            document.getElementById("tc_but").style.display = "initial";
         }
         function usr() {
             document.getElementById("all_rev").style.display = "none";
@@ -282,5 +297,44 @@ var m=0;
         function b_don(){//click bar to donut brazil
             document.getElementById("BRA_bar").style.display = "none";//bar        
             document.getElementById("BRA_tax_rev").style.display = "initial";//donut
+        }
+
+        function rc_but(){
+            document.getElementById("CAN_rev").style.display = "initial";
+            document.getElementById("ec").style.display = "initial"; //explain
+
+            //button
+            document.getElementById("rc_but").style.display = "none";
+            document.getElementById("tc_but").style.display = "initial";
+
+            //tax rev
+            document.getElementById("drop_c").style.display = "none";
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            
+        }
+        function tc_but(){
+            document.getElementById("CAN_rev").style.display = "none";
+            document.getElementById("ec").style.display = "none"; //explain
+
+            //button
+            document.getElementById("rc_but").style.display = "initial";
+            document.getElementById("tc_but").style.display = "none";
+
+            //tax rev
+            document.getElementById("drop_c").style.display = "initial";
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "initial";//donut
+            document.getElementById("etax_c").style.display = "initial";//explain tax rev
+            
+        }
+        function c_bar(){ //click donut to bar canada
+            document.getElementById("CAN_bar").style.display = "initial";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "none";//donut
+        }
+        function c_don(){//click bar to donut canada
+            document.getElementById("CAN_bar").style.display = "none";//bar        
+            document.getElementById("CAN_tax_rev").style.display = "initial";//donut
         }
 
