@@ -47,7 +47,7 @@
             <div class="in" id="b1" onclick="menu()"><a href="#MAP" class="click"><div class="c">MAP</div></a></div>
             <div class="in" id="b2" onclick="menu()"><a href="#IMPORT" class="click"><div class="c">IMPORT OF GOODS AND SERVICES</div></a></div>
             <div class="in" id="b3" onclick="menu()"><a href="#EXPORT" class="click"><div class="c">EXPORT OF GOODS AND SERVICES</div></a></div>
-            <div class="in" id="b4" onclick="menu()"><a href="#TAX" class="click"><div class="c">TAX RATE : ANALYSIS</div></a></div>
+            <div class="in" id="b4" onclick="menu()"><a href="#TAX" class="click"><div class="c">PERSONAL INCOME TAX : ANALYSIS</div></a></div>
         </div>
         <button onclick="Omenu()" id="menu">MENU</button>
         
@@ -57,7 +57,14 @@
             </div>
             <div style="width:49%;height:100%;float: right;display:inline-block;position: relative;">
                 <br><br><br><br>
-                <div style="font-size: 40px;">อธิบาย</div>
+                <div style="font-size: 15px;width:80%;position:absolute;transform: translate(-50%,-50%);top:50%;left:50%;">
+                    This box plot graph shows that the tax rates of <span style="color:#00a3a3">all 5 countries have a similar average personal income tax</span>.<br><br>
+                    <span style="font-size: 18px;font-weight:600;color:#0073a0;font-style: italic;">But</span> when the value of the income is very high, to a certain extent, 
+                    there will be a slightly different tax payment rate.
+                    <br><br>
+                    Will see that USA, Jamaica and Argentina will have higher tax amounts than Canada and Brazil with less taxation rates <br>and 
+                    Jamaica will have a minimum tax payment threshold than other countries (Start paying taxes that are higher in revenue than other countries.
+                </div>
             </div> 
             <!-- <div id="tax"style="height: 400px; margin: auto; min-width: 310px; max-width: 600px"></div> -->
         </div>
@@ -103,64 +110,64 @@
                                             From the graph you will see that The country with the highest total tax revenue is 
                                             <span style="font-style: italic;font-weight: 600;font-size: 18px;">USA</span>,
                                              which is much higher than other countries.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Argentina</span> and <span style="font-style: italic;font-weight: 600;">Brazil</span>
-                                            , which have similar tax rates to the USA and <span style="font-style: italic;font-weight: 600;">Canada</span> and 
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Brazil</span> and <span style="font-style: italic;font-weight: 600;">canada</span>
+                                            , which have similar tax rates to the USA and <span style="font-style: italic;font-weight: 600;">Argentina</span> and 
                                             <span style="font-style: italic;font-weight: 600;">Jamaica</span>.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="brazil" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="ebg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Brazil has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Services, value added</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">62%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Industry(including construction)</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">19%</span> of the country's revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="canada" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="ecg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Canada has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Services, value added</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">65%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Import of goods and services</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">33%</span> of the country's revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="US" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="eug"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            United States has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Services, value added</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">65%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Import of goods and services</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">33%</span> of the country's revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="JM" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="ejg"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            Jamaica has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Services, value added</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">62%</span> 
                                             of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Import of goods and services</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">48%</span> of the country's revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="AG" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="eag"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Argentina has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Services, value added</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">55%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Industry(including construction)</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">23%</span> of the country's revenue.
                                         </div>
                                     </div>
                                 </div>    
@@ -203,28 +210,28 @@
                                     <div>
                                         <div id="all_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="er"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            From the graph you will see that The country with the highest total tax revenue is 
+                                            From the graph you will see that The country with the highest value of government revenue is 
                                             <span style="font-style: italic;font-weight: 600;font-size: 18px;">USA</span>,
-                                             which is much higher than other countries.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Argentina</span> and <span style="font-style: italic;font-weight: 600;">Brazil</span>
-                                            , which have similar tax rates to the USA and <span style="font-style: italic;font-weight: 600;">Canada</span> and 
+                                             which is much higher than other countries because USA is the country with the highest GDP in the world.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Canada</span> and <span style="font-style: italic;font-weight: 600;">Brazil</span>
+                                            , which have similar similar amount of government revenues, and <span style="font-style: italic;font-weight: 600;">Argentina</span> and 
                                             <span style="font-style: italic;font-weight: 600;">Jamaica</span>.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="BRA_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
-                                        <div id="eb"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                        <div id="eb"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:85%;text-align: left;margin-left:5%;">
+                                            Brazil's main revenue comes from <span style="font-size: 18px;font-style: italic;font-weight: 600;">Tax revenue</span>, which is mainly accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">42.9%</span>.<br> 
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Social contributions</span> 
+                                            which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">31.3%</span>, <span style="font-style: italic;font-weight: 600;">Grants and other revenue</span>
+                                             are <span style="font-weight: 600;font-style:italic;">22.9%</span>.
                                         </div>
                                         <div onclick="tb_but()" id="tb_but" class="r-but">Focus Tax Revenue</div>
                                         <div onclick="rb_but()" id="rb_but" class="r-but">Focus Total Revenue</div>
                                         <div id="drop_b" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
-                                            <button class="dropbtn">type graph</button>
+                                            <button class="dropbtn">Type Graph</button>
                                             <div class="dropdown-content">
                                                 <div onclick="b_bar()" class="d">BAR</div>
                                                 <div onclick="b_don()" class="d">DONUT</div>
@@ -233,28 +240,28 @@
                                         <div id="BRA_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="BRA_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="etax_b"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            As you can see, the highest percentage of this Brazil's tax revenue graph is<span style="font-style: italic;font-weight: 600;">
+                                            Tax on income, profits and capital gains</span> which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">50.2%</span> 
                                             of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes on goods and services</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">43%</span> of the country's tax revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="CAN_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
                                         <div id="ec"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Canada has the main income derived from <span style="font-size: 18px;font-style: italic;font-weight: 600;">
+                                            Tax revenue</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">70%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Social contributions</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">24%</span> of the country's revenue.
                                         </div>
-                                        <div onclick="tc_but()" id="tc_but" class="r-but">C Focus Tax Revenue</div>
-                                        <div onclick="rc_but()" id="rc_but" class="r-but">C Focus Total Revenue</div>
+                                        <div onclick="tc_but()" id="tc_but" class="r-but">Focus Tax Revenue</div>
+                                        <div onclick="rc_but()" id="rc_but" class="r-but">Focus Total Revenue</div>
                                         <div id="drop_c" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
-                                            <button class="dropbtn">type graph</button>
+                                            <button class="dropbtn">Type Graph</button>
                                             <div class="dropdown-content">
                                                 <div onclick="c_bar()" class="d">BAR</div>
                                                 <div onclick="c_don()" class="d">DONUT</div>
@@ -263,28 +270,26 @@
                                         <div id="CAN_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="CAN_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="etax_c"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            As you can see, the highest percentage of this Canada's tax revenue graph is <span style="font-style: italic;font-weight: 600;">
                                             Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">97%</span> 
+                                            of the country's total tax revenue, which is much higher than other catagories.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="USA_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
                                         <div id="eu"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            United States has the main income derived from <span style="font-size: 18px;font-style: italic;font-weight: 600;">
+                                            Tax revenue</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">58%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Social contributions</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">34%</span> of the country's revenue.
                                         </div>
-                                        <div onclick="tu_but()" id="tu_but" class="r-but">U Focus Tax Revenue</div>
-                                        <div onclick="ru_but()" id="ru_but" class="r-but">U Focus Total Revenue</div>
+                                        <div onclick="tu_but()" id="tu_but" class="r-but">Focus Tax Revenue</div>
+                                        <div onclick="ru_but()" id="ru_but" class="r-but">Focus Total Revenue</div>
                                         <div id="drop_u" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
-                                            <button class="dropbtn">type graph</button>
+                                            <button class="dropbtn">Type Graph</button>
                                             <div class="dropdown-content">
                                                 <div onclick="u_bar()" class="d">BAR</div>
                                                 <div onclick="u_don()" class="d">DONUT</div>
@@ -293,28 +298,28 @@
                                         <div id="USA_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="USA_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="etax_u"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            As you can see, the highest percentage of this United States's tax revenue graph is <span style="font-size:18px;font-style: italic;font-weight: 600;">
                                             Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">72%</span> 
                                             of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes on goods and services</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">5%</span> of the country's tax revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="JAM_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>  
                                         <div id="ej"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Jamaica has the main income derived from <span style="font-style: italic;font-weight: 600;">
+                                            Tax revenue</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">74%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Custom and other import duties</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">26%</span> of the country's revenue.
                                         </div>
-                                        <div onclick="tj_but()" id="tj_but" class="r-but">J Focus Tax Revenue</div>
-                                        <div onclick="rj_but()" id="rj_but" class="r-but">J Focus Total Revenue</div>
+                                        <div onclick="tj_but()" id="tj_but" class="r-but">Focus Tax Revenue</div>
+                                        <div onclick="rj_but()" id="rj_but" class="r-but">Focus Total Revenue</div>
                                         <div id="drop_j" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
-                                            <button class="dropbtn">type graph</button>
+                                            <button class="dropbtn">Type Graph</button>
                                             <div class="dropdown-content">
                                                 <div onclick="j_bar()" class="d">BAR</div>
                                                 <div onclick="j_don()" class="d">DONUT</div>
@@ -323,28 +328,28 @@
                                         <div id="JAM_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="JAM_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="etax_j"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            As you can see, the highest percentage of this Jamaica's tax revenue graph is <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Tax on international trade</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">38%</span> 
                                             of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes on income, profits and capital gains</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">35%</span> of the country's tax revenue.
                                         </div>
                                     </div>
                                     <div>
                                         <div id="ARG_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="ea"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
-                                            of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Argentina has the main income derived from <span style="font-size:18px;font-style: italic;font-weight: 600;">
+                                            Tax revenue</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">50%</span> 
+                                            of the country's total revenue.<br>
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Social contributions</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">28%</span> of the country's revenue.
                                         </div>
-                                        <div onclick="ta_but()" id="ta_but" class="r-but">A Focus Tax Revenue</div>
-                                        <div onclick="ra_but()" id="ra_but" class="r-but">A Focus Total Revenue</div>
+                                        <div onclick="ta_but()" id="ta_but" class="r-but">Focus Tax Revenue</div>
+                                        <div onclick="ra_but()" id="ra_but" class="r-but">Focus Total Revenue</div>
                                         <div id="drop_a" class="dropdown" style="float:right;position:absolute;transform: translate(-50%,-50%);top:30%;right:0;">
-                                            <button class="dropbtn">type graph</button>
+                                            <button class="dropbtn">Type Graph</button>
                                             <div class="dropdown-content">
                                                 <div onclick="a_bar()" class="d">BAR</div>
                                                 <div onclick="a_don()" class="d">DONUT</div>
@@ -353,12 +358,12 @@
                                         <div id="ARG_tax_rev" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="ARG_bar" style="position:absolute;transform: translate(-50%,-50%);top:40%;left:30%;"></div>
                                         <div id="etax_a"style="position:absolute;transform: translate(-50%,-50%);top:78%;left:25%;width:80%;text-align: left;margin-left:5%;">
-                                            Canada has the main income derived from <span style="font-style: italic;font-weight: 600;">
-                                            Tax on income, profits and capital gains</span>, which accounted for 
-                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">77%</span> 
+                                            As you can see, the highest percentage of this Argentina's tax revenue graph is <span style="font-style: italic;font-weight: 600;">
+                                            Tax on goods and services</span>, which accounted for 
+                                            <span style="font-size: 18px;font-weight: 600;font-style:italic;">45%</span> 
                                             of the country's total tax revenue.<br>
-                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes ov international trade</span> which accounted for
-                                            <span style="font-weight: 600;font-style:italic;">2.2%</span> of the country's tax revenue
+                                            Followed by <span style="font-style: italic;font-weight: 600;">Taxes on income, profits and capital gains</span> which accounted for
+                                            <span style="font-weight: 600;font-style:italic;">20%</span> of the country's tax revenue.
                                         </div>
                                     </div>
 

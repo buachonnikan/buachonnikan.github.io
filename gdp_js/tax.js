@@ -5,7 +5,7 @@ Highcharts.chart('tax', {
   },
 
   title: {
-    text: 'Tax'
+    text: 'Personal Income Tax'
   },
 
   legend: {

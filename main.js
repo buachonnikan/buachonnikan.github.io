@@ -238,6 +238,10 @@ var m=0;
             document.getElementById("ARG_tax_rev").style.display = "none";//donut
             document.getElementById("drop_a").style.display = "none";//drop
             
+            document.getElementById("etax_j").style.display = "none";//explain tax rev
+            document.getElementById("etax_a").style.display = "none";//explain tax rev
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
         }
         function canr() {
             document.getElementById("all_rev").style.display = "none";
@@ -282,6 +286,11 @@ var m=0;
             document.getElementById("ARG_bar").style.display = "none";//bar        
             document.getElementById("ARG_tax_rev").style.display = "none";//donut
             document.getElementById("drop_a").style.display = "none";//drop
+
+            document.getElementById("etax_j").style.display = "none";//explain tax rev
+            document.getElementById("etax_a").style.display = "none";//explain tax rev
+            document.getElementById("etax_b").style.display = "none";//explain tax rev
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
         }
         function usr() {
             document.getElementById("all_rev").style.display = "none";
@@ -326,6 +335,11 @@ var m=0;
             document.getElementById("ARG_bar").style.display = "none";//bar        
             document.getElementById("ARG_tax_rev").style.display = "none";//donut
             document.getElementById("drop_a").style.display = "none";//drop
+
+            document.getElementById("etax_j").style.display = "none";//explain tax rev
+            document.getElementById("etax_a").style.display = "none";//explain tax rev
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("etax_b").style.display = "none";//explain tax rev
         }
         function arr() {
             document.getElementById("all_rev").style.display = "none";
@@ -370,6 +384,11 @@ var m=0;
             document.getElementById("USA_bar").style.display = "none";//bar        
             document.getElementById("USA_tax_rev").style.display = "none";//donut
             document.getElementById("drop_u").style.display = "none";//drop
+
+            document.getElementById("etax_j").style.display = "none";//explain tax rev
+            document.getElementById("etax_b").style.display = "none";//explain tax rev
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
         }
         function jmr() {
             document.getElementById("all_rev").style.display = "none";
@@ -414,6 +433,11 @@ var m=0;
             document.getElementById("ARG_bar").style.display = "none";//bar        
             document.getElementById("ARG_tax_rev").style.display = "none";//donut
             document.getElementById("drop_a").style.display = "none";//drop
+
+            document.getElementById("etax_b").style.display = "none";//explain tax rev
+            document.getElementById("etax_a").style.display = "none";//explain tax rev
+            document.getElementById("etax_c").style.display = "none";//explain tax rev
+            document.getElementById("etax_u").style.display = "none";//explain tax rev
         }
 
         function rb_but(){

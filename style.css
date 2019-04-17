@@ -297,17 +297,16 @@ a{
   .dropdown:hover .dropbtn {background-color: #7c7c7c;}
 
 .r-but{
-    /* display:inline-block; */
     background-color: grey;
     color:white;
     cursor: pointer;
-    /* position: absolute; */
-    /* transform: translate(-50%,-50%);
-    top:0%;
-    left:45%; */
+    padding:5px;
 }
 
 .d{
     padding:3px;
     cursor: pointer;
+}
+.d:hover{
+    color:#147a94;
 }
