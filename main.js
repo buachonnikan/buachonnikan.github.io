@@ -191,6 +191,9 @@ var m=0;
             document.getElementById("etax_b").style.display = "none";//explain tax rev
             document.getElementById("rb_but").style.display = "none";
             document.getElementById("tb_but").style.display = "initial";
+
+            document.getElementById("rc_but").style.display = "none";
+            document.getElementById("tc_but").style.display = "none";
         }
         function canr() {
             document.getElementById("all_rev").style.display = "none";
@@ -213,6 +216,9 @@ var m=0;
             document.getElementById("etax_c").style.display = "none";//explain tax rev
             document.getElementById("rc_but").style.display = "none";
             document.getElementById("tc_but").style.display = "initial";
+
+            document.getElementById("rb_but").style.display = "none";
+            document.getElementById("tb_but").style.display = "none";
         }
         function usr() {
             document.getElementById("all_rev").style.display = "none";
